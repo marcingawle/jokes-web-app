@@ -14,12 +14,10 @@ import pl.pp.spring.jokeswebapp.services.UserService;
 @Component
 public class DataLoader implements CommandLineRunner {
 
-    private final JokeService jokeService;
     private final CategoryService categoryService;
     private final UserService userService;
 
-    public DataLoader(JokeService jokeService, CategoryService categoryService, UserService userService) {
-        this.jokeService = jokeService;
+    public DataLoader(CategoryService categoryService, UserService userService) {
         this.categoryService = categoryService;
         this.userService = userService;
     }
@@ -44,10 +42,6 @@ public class DataLoader implements CommandLineRunner {
         michalNowak.setEmail("michalNowak@gmail.com");
         michalNowak.setPassword("michalNowak");
 
-        userService.save(janKowalski);
-        userService.save(michalNowak);
-
-
         Joke joke1 = getExampleJoke1();
         Joke joke2 = getExampleJoke2();
 
@@ -63,12 +57,18 @@ public class DataLoader implements CommandLineRunner {
         category2.getJokes().add(joke2);
         category3.getJokes().add(joke2);
 
+        janKowalski.getJokes().add(joke1);
+        janKowalski.getJokes().add(joke2);
+
+        joke1.setUser(janKowalski);
+        joke2.setUser(janKowalski);
+
         categoryService.save(category1);
         categoryService.save(category2);
         categoryService.save(category3);
 
-        jokeService.save(joke1);
-        jokeService.save(joke2);
+        userService.save(janKowalski);
+        userService.save(michalNowak);
 
         System.out.println("[DataLoader] data loaded");
     }
