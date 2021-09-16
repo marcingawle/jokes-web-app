@@ -73,3 +73,8 @@ body {
 .content {
      padding-left: 10px;
 }
+
+.joke-info {
+    font-size: 12px;
+    text-align: center;
+}
