@@ -9,7 +9,9 @@ import pl.pp.spring.jokeswebapp.services.CategoryService;
 import pl.pp.spring.jokeswebapp.services.JokeService;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class JokeController {
@@ -45,7 +47,7 @@ public class JokeController {
 
 
 
-        List<Category> categories = new ArrayList<>();
+        Set<Category> categories = new HashSet<>();
 
         for (Long id : categoryIds) {
             Category category = categoryService.findById(id);
