@@ -53,6 +53,7 @@ public class User extends BaseEntity {
 
     public void setUserProfile(UserProfile userProfile) {
         this.userProfile = userProfile;
+        userProfile.setUser(this);
     }
 
     public Set<Joke> getJokes() {
