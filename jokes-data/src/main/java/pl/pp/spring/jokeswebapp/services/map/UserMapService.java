@@ -8,9 +8,5 @@ import pl.pp.spring.jokeswebapp.services.UserService;
 @Service
 @Profile("map")
 public class UserMapService extends BaseMapService<User> implements UserService {
-    @Override
-    public User save(User entity) {
-        System.out.println("user map service");
-        return super.save(entity);
-    }
+
 }
