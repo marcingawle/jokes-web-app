@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.pp.spring.jokeswebapp.services.CategoryService;
 import pl.pp.spring.jokeswebapp.services.JokeService;
-import pl.pp.spring.jokeswebapp.services.db.CategoryDbService;
 
 @Controller
 public class IndexController {
