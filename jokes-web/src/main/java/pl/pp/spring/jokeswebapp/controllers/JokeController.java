@@ -8,7 +8,6 @@ import pl.pp.spring.jokeswebapp.model.Joke;
 import pl.pp.spring.jokeswebapp.services.CategoryService;
 import pl.pp.spring.jokeswebapp.services.JokeService;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -25,7 +24,7 @@ public class JokeController {
     }
 
     @RequestMapping("/jokes")
-    public String showIndex(Model model,  @RequestParam("categoryId") Long categoryId) {
+    public String showIndex(Model model, @RequestParam("categoryId") Long categoryId) {
         model.addAttribute("jokes", categoryService.findById(categoryId).getJokes());
         model.addAttribute("categories", categoryService.findAll());
 
@@ -44,7 +43,6 @@ public class JokeController {
     @PostMapping("/jokes/add")
     public String addJoke(@ModelAttribute Joke joke, @RequestParam("category") List<Long> categoryIds) {
         System.out.println(joke);
-
 
 
         Set<Category> categories = new HashSet<>();

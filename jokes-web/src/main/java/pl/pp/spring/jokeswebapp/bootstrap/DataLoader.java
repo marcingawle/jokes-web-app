@@ -9,8 +9,6 @@ import pl.pp.spring.jokeswebapp.model.Joke;
 import pl.pp.spring.jokeswebapp.model.User;
 import pl.pp.spring.jokeswebapp.model.UserProfile;
 import pl.pp.spring.jokeswebapp.services.CategoryService;
-import pl.pp.spring.jokeswebapp.services.JokeService;
-import pl.pp.spring.jokeswebapp.services.UserProfileService;
 import pl.pp.spring.jokeswebapp.services.UserService;
 
 @Component

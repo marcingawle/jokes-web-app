@@ -2,7 +2,6 @@ package pl.pp.spring.jokeswebapp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.Transient;
 import java.util.HashSet;
 import java.util.Set;
 

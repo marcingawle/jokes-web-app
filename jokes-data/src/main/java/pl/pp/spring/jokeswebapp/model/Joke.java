@@ -13,8 +13,8 @@ public class Joke extends BaseEntity {
 
     @ManyToMany
     @JoinTable(name = "JOKE_CATEGORIES",
-       joinColumns = @JoinColumn(name = "JOKES_ID"),
-        inverseJoinColumns = @JoinColumn(name = "CATEGORIES_ID"))
+            joinColumns = @JoinColumn(name = "JOKES_ID"),
+            inverseJoinColumns = @JoinColumn(name = "CATEGORIES_ID"))
     private Set<Category> categories = new HashSet<>();
 
     @ManyToOne
