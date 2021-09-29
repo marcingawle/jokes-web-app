@@ -20,7 +20,7 @@ public class JokeController {
     private final CategoryService categoryService;
     private final JokeService jokeService;
 
-    private Logger log = LoggerFactory.getLogger(IndexController.class);
+    private Logger log = LoggerFactory.getLogger(JokeController.class);
 
     public JokeController(CategoryService categoryService, JokeService jokeService) {
         this.categoryService = categoryService;
