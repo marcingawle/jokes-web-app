@@ -31,4 +31,9 @@ public abstract class BaseMapService<E extends BaseEntity> implements BaseServic
         map.put(entity.getId(), entity);
         return entity;
     }
+
+    @Override
+    public void deleteById(Long id) {
+        map.remove(id);
+    }
 }

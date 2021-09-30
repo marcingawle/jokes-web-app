@@ -44,4 +44,10 @@ public class UserDbService implements UserService {
         log.info("saving user: {}", user.getUsername());
         return userRepository.save(user);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        log.info("delete user by id: {}", id);
+        userRepository.deleteById(id);
+    }
 }

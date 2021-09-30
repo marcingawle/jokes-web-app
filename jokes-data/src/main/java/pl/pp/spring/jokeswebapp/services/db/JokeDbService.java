@@ -42,4 +42,10 @@ public class JokeDbService implements JokeService {
         log.info("saving joke with id: {}", joke.getId());
         return jokeRepository.save(joke);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        log.info("delete joke by id: {}", id);
+        jokeRepository.deleteById(id);
+    }
 }
